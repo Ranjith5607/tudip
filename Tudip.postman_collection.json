@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "b7243a33-67b0-464d-9d91-42639657e9b1",
+		"name": "Tudip",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "saveRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"candidateName\": \"Akash\",\r\n    \"candidatePhoneNumber\": \"8500829784\",\r\n    \"candidateEmail\": \"pranitha@gmail.com\",\r\n    \"address\": [{\r\n            \"address\": \"kamareddy\",\r\n            \"city\": \"kamaredyy\",\r\n            \"state\": \"telanagana\",\r\n            \"cuntry\": \"india\",\r\n            \"pinCode\": \"503125\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchALLRequest",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"candidateName\": \"Ranjith\",\r\n    \"candidatePhoneNumber\": \"7893597894\",\r\n    \"candidateEmail\": \"ranjith@gmail.com\",\r\n    \"AddressModel\": [\r\n        {\r\n            \"address\": \"hyderbad\",\r\n            \"city\": \"hitech city\",\r\n            \"state\": \"telanagana\",\r\n            \"cuntry\": \"india\",\r\n            \"pinCode\": \"500082\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/fetchAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"fetchAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCandidatesRequest",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"candidateName\": \"Ranjith\",\r\n    \"candidatePhoneNumber\": \"7893597894\",\r\n    \"candidateEmail\": \"ranjith@gmail.com\",\r\n    \"AddressModel\": [\r\n        {\r\n            \"address\": \"hyderbad\",\r\n            \"city\": \"hitech city\",\r\n            \"state\": \"telanagana\",\r\n            \"cuntry\": \"india\",\r\n            \"pinCode\": \"500082\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/getAllCandidates?pageNo=1&pageSize=1&sortBy=candidateName&sortDir=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"getAllCandidates"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "1"
+						},
+						{
+							"key": "sortBy",
+							"value": "candidateName"
+						},
+						{
+							"key": "sortDir",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllCandidatesEditRequest",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n        \"candidateId\": 5,\r\n        \"candidateName\": \"Akash\",\r\n        \"candidatePhoneNumber\": \"8500829784\",\r\n        \"candidateEmail\": \"pranitha@gmail.com\",\r\n        \"address\": [{\r\n                \"addressId\": 6,\r\n                \"address\": \"kamareddy\",\r\n                \"city\": \"kamaredyy\",\r\n                \"state\": \"telanagana\",\r\n                \"cuntry\": \"india\",\r\n                \"pinCode\": \"503125\"\r\n            }\r\n        ]\r\n    }, {\r\n        \"candidateId\": 7,\r\n        \"candidateName\": \"Akash\",\r\n        \"candidatePhoneNumber\": \"8500829784\",\r\n        \"candidateEmail\": \"pranitha@gmail.com\",\r\n        \"address\": [{\r\n                \"addressId\": 8,\r\n                \"address\": \"kamareddy\",\r\n                \"city\": \"kamaredyy\",\r\n                \"state\": \"telanagana\",\r\n                \"cuntry\": \"india\",\r\n                \"pinCode\": \"503125\"\r\n            }\r\n        ]\r\n    }, {\r\n        \"candidateId\": 3,\r\n        \"candidateName\": \"Pranitha\",\r\n        \"candidatePhoneNumber\": \"8500829784\",\r\n        \"candidateEmail\": \"pranitha@gmail.com\",\r\n        \"address\": [{\r\n                \"addressId\": 4,\r\n                \"address\": \"kamareddy\",\r\n                \"city\": \"kamaredyy\",\r\n                \"state\": \"telanagana\",\r\n                \"cuntry\": \"india\",\r\n                \"pinCode\": \"503125\"\r\n            }\r\n        ]\r\n    }, {\r\n        \"candidateId\": 1,\r\n        \"candidateName\": \"Ranjith1111\",\r\n        \"candidatePhoneNumber\": \"7893597894\",\r\n        \"candidateEmail\": \"ranjith@gmail.com\",\r\n        \"address\": [{\r\n                \"addressId\": 2,\r\n                \"address\": \"hyderbad\",\r\n                \"city\": \"hitech city\",\r\n                \"state\": \"telanagana\",\r\n                \"cuntry\": \"india\",\r\n                \"pinCode\": \"500082\"\r\n            }\r\n        ]\r\n    }\r\n\r\n    \r\n    ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"edit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
